@@ -1,61 +1,105 @@
+/* --- Global Styles & Layout --- */
+
 body {
-  font-family: system-ui, sans-serif;
+  /* This puts the nav and main content side-by-side */
+  display: flex; 
   margin: 0;
-  background-color: #f8fafc;
-  color: #333;
+  /* Use the simple 'Roboto' font for main text */
+  font-family: 'Roboto', sans-serif;
+  background-color: #fcfcfc; /* Very light gray background */
 }
 
-header {
-  background: #0b3954;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 1rem;
+/* This is the wrapper for your main page content */
+.main-content {
+  flex-grow: 1; /* Makes the main content take up the remaining space */
+  padding: 2rem 4rem; /* Add some spacing */
 }
 
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
+/* --- Sidebar Menu Styles (Based on your image) --- */
+
+.sidebar-menu {
+  /* Layout & Sizing */
+  width: 280px; /* Feel free to adjust the width */
+  min-height: 100vh; /* Make it full browser height */
+  padding: 2.5rem;
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  
+  /* Colors */
+  background-color: #f4f4f4; /* Light gray menu background */
+  border-right: 1px solid #eee; /* Subtle separator line */
 }
 
-nav a:hover {
-  text-decoration: underline;
+.sidebar-menu h2 {
+  /* This is the "Menu" heading */
+  font-family: 'Playfair Display', serif; /* The stylish serif font */
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  
+  /* This creates the red/coral underline */
+  border-bottom: 3px solid #e05c5c;
+  display: inline-block; /* Makes border only go under the text */
 }
 
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+.sidebar-menu ul {
+  list-style: none; /* Removes the bullet points */
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd; /* Line above the first item */
+}
+
+.sidebar-menu li {
+  border-bottom: 1px solid #ddd; /* Line between items */
+}
+
+.sidebar-menu a {
+  display: block; /* Makes the whole area clickable */
+  padding: 1rem 0;
+  text-decoration: none; /* Removes the link underline */
+  text-transform: uppercase; /* Makes text uppercase like the image */
+  
+  color: #555; /* Default link color */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  
+  transition: color 0.2s ease-in-out; /* Smooth color change on hover */
+}
+
+/* --- Active & Hover States --- */
+
+/* This styles the .active link (the current page) */
+.sidebar-menu a.active {
+  color: #e05c5c; /* The red/coral color */
+}
+
+/* Styles links when you hover over them (but not the active one) */
+.sidebar-menu a:not(.active):hover {
+  color: #000; /* Darken the text on hover */
+}
+
+
+/* --- Your Original Content Styles --- */
+
+.profile-photo {
+  max-width: 200px;
+  border-radius: 8px; /* A slight rounded corner */
+  margin-bottom: 1rem;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
 }
 
 footer {
-  background: #0b3954;
-  color: white;
-  text-align: center;
-  padding: 1rem;
   margin-top: 3rem;
-}
-
-/* About Page */
-.about {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.profile {
-  width: 200px;
-  border-radius: 100%;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* Projects Page */
-.project-card {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  margin: 1rem 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+  color: #999;
+  font-size: 0.9rem;
 }
