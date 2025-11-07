@@ -103,3 +103,14 @@ footer {
   color: #999;
   font-size: 0.9rem;
 }
+
+.sidebar-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+.main-content {
+  margin-left: 280px; /* same width as sidebar */
+}
+
