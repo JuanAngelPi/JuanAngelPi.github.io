@@ -1,136 +1,212 @@
-/* --- Global Styles & Layout --- */
-
+/* ------------------------------
+   GLOBAL STYLES
+--------------------------------*/
 body {
-  /* This puts the nav and main content side-by-side */
-  display: flex; 
-  margin: 0;
-  /* Use the simple 'Roboto' font for main text */
-  font-family: 'Roboto', sans-serif;
-  background-color: #fcfcfc; /* Very light gray background */
+  display: flex;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fafafa;
+  color: #333;
 }
 
-/* This is the wrapper for your main page content */
-.main-content {
-  flex-grow: 1; /* Makes the main content take up the remaining space */
-  padding: 2rem 4rem; /* Add some spacing */
-}
-
-/* --- Sidebar Menu Styles (Based on your image) --- */
-
+/* --- Sidebar --- */
 .sidebar-menu {
-  /* Layout & Sizing */
-  width: 280px; /* Feel free to adjust the width */
-  min-height: 100vh; /* Make it full browser height */
-  padding: 2.5rem;
-  box-sizing: border-box; /* Ensures padding doesn't add to the width */
-  
-  /* Colors */
-  background-color: #f4f4f4; /* Light gray menu background */
-  border-right: 1px solid #eee; /* Subtle separator line */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100vh;
+  padding: 2rem;
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
 }
 
 .sidebar-menu h2 {
-  /* This is the "Menu" heading */
-  font-family: 'Playfair Display', serif; /* The stylish serif font */
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #222;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  
-  /* This creates the red/coral underline */
-  border-bottom: 3px solid #e05c5c;
-  display: inline-block; /* Makes border only go under the text */
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  border-bottom: 3px solid #e05c5c;
+  display: inline-block;
 }
 
 .sidebar-menu ul {
-  list-style: none; /* Removes the bullet points */
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid #ddd; /* Line above the first item */
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0 0;
 }
 
 .sidebar-menu li {
-  border-bottom: 1px solid #ddd; /* Line between items */
+  border-bottom: 1px solid #ddd;
 }
 
 .sidebar-menu a {
-  display: block; /* Makes the whole area clickable */
-  padding: 1rem 0;
-  text-decoration: none; /* Removes the link underline */
-  text-transform: uppercase; /* Makes text uppercase like the image */
-  
-  color: #555; /* Default link color */
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  
-  transition: color 0.2s ease-in-out; /* Smooth color change on hover */
+  display: block;
+  padding: 1rem 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease-in-out;
 }
 
-/* --- Active & Hover States --- */
-
-/* This styles the .active link (the current page) */
 .sidebar-menu a.active {
-  color: #e05c5c; /* The red/coral color */
+  color: #e05c5c;
 }
 
-/* Styles links when you hover over them (but not the active one) */
-.sidebar-menu a:not(.active):hover {
-  color: #000; /* Darken the text on hover */
+.sidebar-menu a:hover:not(.active) {
+  color: #000;
 }
 
-
-/* --- Your Original Content Styles --- */
-
-.profile-photo {
-  max-width: 200px;
-  border-radius: 8px; /* A slight rounded corner */
-  margin-bottom: 1rem;
-}
-
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-}
-
-footer {
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
-  padding-top: 1.5rem;
-  color: #999;
-  font-size: 0.9rem;
-}
-
-.sidebar-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-}
+/* --- Main content area --- */
 .main-content {
-  margin-left: 280px; /* same width as sidebar */
+  margin-left: 260px;
+  padding: 3rem 4rem;
+  flex-grow: 1;
+  box-sizing: border-box;
 }
 
-/* --- ESTILOS PARA LOS ICONOS SOCIALES --- */
+/* --- Headings --- */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #222;
+}
 
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* --- About Section --- */
+.profile-photo {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.text-link {
+  color: #e05c5c;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+
+.text-link:hover {
+  border-bottom: 1px solid #e05c5c;
+}
+
+/* --- Social Icons --- */
 .social-icons {
-  margin-top: 25px; /* Espacio para separar del texto */
-  padding: 0; /* Asegura que no tenga padding */
+  margin-top: 2rem;
 }
 
 .social-icons a {
-  font-size: 1.8rem;      /* Tamaño de los iconos */
-  color: #555;         /* Color principal (gris oscuro) */
-  margin-right: 20px;   /* Espacio entre iconos */
-  text-decoration: none;
+  font-size: 1.6rem;
+  color: #555;
+  margin-right: 18px;
   transition: color 0.3s;
 }
 
-/* Usamos el color de tu tema (#e05c5c) para el hover */
 .social-icons a:hover {
-  color: #e05c5c; 
+  color: #e05c5c;
 }
+
+/* --- Projects Section --- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #e05c5c;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #e05c5c;
+  color: white;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #c94b4b;
+}
+
+/* --- CV Section --- */
+.cv ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cv ul li {
+  margin-bottom: 0.6rem;
+}
+
+.cv h3 {
+  margin-top: 2rem;
+  color: #e05c5c;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* --- Animation --- */
+.fade-in {
+  animation: fadeIn 0.7s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
