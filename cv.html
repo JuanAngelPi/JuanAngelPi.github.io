@@ -7,20 +7,20 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <nav class="sidebar-menu">
+  <nav class="sidebar-menu" id="navbar">
     <h2>Menu</h2>
     <ul>
       <li><a href="index.html">About Me</a></li>
       <li><a href="cv.html" class="active">CV</a></li>
       <li><a href="projects.html">Projects</a></li>
-      <li><a href="TU_URL_DE_SUBSTACK" target="_blank">Metrika</a></li>
     </ul>
+    <button class="menu-toggle" id="menuToggle"><i class="fa fa-bars"></i></button>
   </nav>
 
   <div class="main-content fade-in">
@@ -28,25 +28,32 @@
       <h1>Curriculum Vitae</h1>
 
       <h3>Education</h3>
-      <ul>
-        <li><strong>Master’s in Statistics for Data Science</strong> – Universidad Carlos III de Madrid (UC3M)</li>
-        <li><strong>Bachelor’s in Economics</strong> – Universidad de Alicante</li>
-      </ul>
+      <p><strong>Bachelor’s Degree in Economics</strong> – Universidad Carlos III de Madrid (UC3M)</p>
+      <p><strong>Master’s in Statistics for Data Science</strong> – UC3M (Ongoing)</p>
 
       <h3>Experience</h3>
-      <ul>
-        <li><strong>Data Analyst Intern</strong> – Sports Analytics Project (2024–Present)</li>
-        <li><strong>Research Assistant</strong> – Economics Department, UC3M (2023–2024)</li>
-      </ul>
+      <p><strong>Data Analyst Intern</strong> – Example Company, 2024</p>
+      <p>Worked on data visualization, exploratory analysis, and predictive modeling projects.</p>
 
       <h3>Skills</h3>
-      <p>Python, R, SQL, Power BI, HTML, CSS, Machine Learning, Econometrics, Data Visualization</p>
-
-      <h3>Languages</h3>
-      <p>Spanish (Native), English (Advanced), French (Basic)</p>
+      <ul>
+        <li>Python (Pandas, NumPy, Matplotlib, Scikit-learn)</li>
+        <li>R, SQL, Excel</li>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Data Visualization & Storytelling</li>
+      </ul>
     </section>
 
     <footer>© 2025 Juan Ángel Pérez Córcoles</footer>
   </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navbar = document.getElementById('navbar');
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
+
