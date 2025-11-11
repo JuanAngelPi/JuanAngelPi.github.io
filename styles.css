@@ -1,116 +1,136 @@
 /* --- Global Styles & Layout --- */
 
 body {
-  /* This puts the nav and main content side-by-side */
-  display: flex; 
-  margin: 0;
-  /* Use the simple 'Roboto' font for main text */
-  font-family: 'Roboto', sans-serif;
-  background-color: #fcfcfc; /* Very light gray background */
+  /* This puts the nav and main content side-by-side */
+  display: flex; 
+  margin: 0;
+  /* Use the simple 'Roboto' font for main text */
+  font-family: 'Roboto', sans-serif;
+  background-color: #fcfcfc; /* Very light gray background */
 }
 
 /* This is the wrapper for your main page content */
 .main-content {
-  flex-grow: 1; /* Makes the main content take up the remaining space */
-  padding: 2rem 4rem; /* Add some spacing */
+  flex-grow: 1; /* Makes the main content take up the remaining space */
+  padding: 2rem 4rem; /* Add some spacing */
 }
 
 /* --- Sidebar Menu Styles (Based on your image) --- */
 
 .sidebar-menu {
-  /* Layout & Sizing */
-  width: 280px; /* Feel free to adjust the width */
-  min-height: 100vh; /* Make it full browser height */
-  padding: 2.5rem;
-  box-sizing: border-box; /* Ensures padding doesn't add to the width */
-  
-  /* Colors */
-  background-color: #f4f4f4; /* Light gray menu background */
-  border-right: 1px solid #eee; /* Subtle separator line */
+  /* Layout & Sizing */
+  width: 280px; /* Feel free to adjust the width */
+  min-height: 100vh; /* Make it full browser height */
+  padding: 2.5rem;
+  box-sizing: border-box; /* Ensures padding doesn't add to the width */
+  
+  /* Colors */
+  background-color: #f4f4f4; /* Light gray menu background */
+  border-right: 1px solid #eee; /* Subtle separator line */
 }
 
 .sidebar-menu h2 {
-  /* This is the "Menu" heading */
-  font-family: 'Playfair Display', serif; /* The stylish serif font */
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #222;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  
-  /* This creates the red/coral underline */
-  border-bottom: 3px solid #e05c5c;
-  display: inline-block; /* Makes border only go under the text */
+  /* This is the "Menu" heading */
+  font-family: 'Playfair Display', serif; /* The stylish serif font */
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  
+  /* This creates the red/coral underline */
+  border-bottom: 3px solid #e05c5c;
+  display: inline-block; /* Makes border only go under the text */
 }
 
 .sidebar-menu ul {
-  list-style: none; /* Removes the bullet points */
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid #ddd; /* Line above the first item */
+  list-style: none; /* Removes the bullet points */
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #ddd; /* Line above the first item */
 }
 
 .sidebar-menu li {
-  border-bottom: 1px solid #ddd; /* Line between items */
+  border-bottom: 1px solid #ddd; /* Line between items */
 }
 
 .sidebar-menu a {
-  display: block; /* Makes the whole area clickable */
-  padding: 1rem 0;
-  text-decoration: none; /* Removes the link underline */
-  text-transform: uppercase; /* Makes text uppercase like the image */
-  
-  color: #555; /* Default link color */
-  font-family: 'Roboto', sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
-  
-  transition: color 0.2s ease-in-out; /* Smooth color change on hover */
+  display: block; /* Makes the whole area clickable */
+  padding: 1rem 0;
+  text-decoration: none; /* Removes the link underline */
+  text-transform: uppercase; /* Makes text uppercase like the image */
+  
+  color: #555; /* Default link color */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  
+  transition: color 0.2s ease-in-out; /* Smooth color change on hover */
 }
 
 /* --- Active & Hover States --- */
 
 /* This styles the .active link (the current page) */
 .sidebar-menu a.active {
-  color: #e05c5c; /* The red/coral color */
+  color: #e05c5c; /* The red/coral color */
 }
 
 /* Styles links when you hover over them (but not the active one) */
 .sidebar-menu a:not(.active):hover {
-  color: #000; /* Darken the text on hover */
+  color: #000; /* Darken the text on hover */
 }
 
 
 /* --- Your Original Content Styles --- */
 
 .profile-photo {
-  max-width: 200px;
-  border-radius: 8px; /* A slight rounded corner */
-  margin-bottom: 1rem;
+  max-width: 200px;
+  border-radius: 8px; /* A slight rounded corner */
+  margin-bottom: 1rem;
 }
 
 .about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
 }
 
 footer {
-  margin-top: 3rem;
-  border-top: 1px solid #eee;
-  padding-top: 1.5rem;
-  color: #999;
-  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+  color: #999;
+  font-size: 0.9rem;
 }
 
 .sidebar-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
 }
 .main-content {
-  margin-left: 280px; /* same width as sidebar */
+  margin-left: 280px; /* same width as sidebar */
+}
+
+/* --- ESTILOS PARA LOS ICONOS SOCIALES --- */
+
+.social-icons {
+  margin-top: 25px; /* Espacio para separar del texto */
+  padding: 0; /* Asegura que no tenga padding */
+}
+
+.social-icons a {
+  font-size: 1.8rem;      /* Tamaño de los iconos */
+  color: #555;         /* Color principal (gris oscuro) */
+  margin-right: 20px;   /* Espacio entre iconos */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Usamos el color de tu tema (#e05c5c) para el hover */
+.social-icons a:hover {
+  color: #e05c5c; 
 }
 
