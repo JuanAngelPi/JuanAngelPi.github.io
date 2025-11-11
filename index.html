@@ -1,171 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan Ángel Pérez Córcoles</title>
-  
+  <title>Juan Ángel Pérez Córcoles - About Me</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #fff7f0; /* light orange background */
-      color: #333;
-    }
-
-    /* Container for menu + content */
-    .container {
-      display: flex;
-      min-height: 100vh;
-    }
-
-    /* Menu */
-    nav {
-      width: 220px;
-      background-color: #ffcc99; /* light orange */
-      padding: 40px 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-    }
-
-    nav h1 {
-      font-size: 1.5em;
-      margin-bottom: 30px;
-      border-bottom: 2px solid #fff;
-      padding-bottom: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    nav ul li {
-      margin: 15px 0;
-      border-radius: 8px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    nav ul li:hover {
-      transform: translateX(5px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    nav ul li a {
-      display: block;
-      padding: 10px 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      transition: color 0.3s, background 0.3s;
-      border-radius: 8px;
-    }
-
-    nav ul li a:hover {
-      color: #fff;
-      background-color: #ff9933;
-    }
-
-    /* Content section */
-    .content {
-      flex: 1;
-      padding: 50px;
-    }
-
-    .about {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-    }
-
-    .about img {
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .about-text {
-      flex: 1;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      color: #777;
-      font-size: 0.9em;
-    }
-
-    @media (max-width: 768px) {
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about img {
-        margin-bottom: 20px;
-      }
-    }
-
-    /* --- ESTILOS PARA LOS ICONOS SOCIALES --- */
-    .social-icons {
-      margin-top: 25px; /* Espacio para separar del texto */
-    }
-
-    .social-icons a {
-      font-size: 1.8rem;      /* Tamaño de los iconos */
-      color: #555;         /* Color principal */
-      margin-right: 20px;   /* Espacio entre iconos */
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #ff9933; /* Color naranja (como tu menú) al pasar el ratón */
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
-  <div class="container">
-    <nav>
-      <h1>Menu</h1>
-      <ul>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="cv.html">CV</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-      <section id="about" class="about">
-        <div class="about-text">
-          <h2>About Me</h2>
-          
-          <p>Hi! I’m Juan Ángel Pérez Córcoles, I'm a graduate in Economics and a master student of Statistics for Data Science at UC3M.</p>
-          <p>I'm an ex-american football player and ex-team member of a Formula Student Team.</p>
-          <p>Welcome to my personal site — here you can learn more about me, my CV, and the projects around Sports Analytics in which I'm working.</p>
-          <p>You can also take a look at my personal substack blog talk Metrika in which I explore stories surrounding the world of sports.</p>
 
-          <div class="social-icons">
-            <a href="TU_URL_DE_X" target="_blank" title="Mi perfil de X">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="TU_URL_DE_LINKEDIN" target="_blank" title="Mi perfil de LinkedIn">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a href="TU_URL_DE_SUBSTACK" target="_blank" title="Mi blog Metrika">
-              <i class="fa-brands fa-substack"></i>
-            </a>
-          </div>
-          
-        </div>
-        <img src="bae1009f-1cfa-401c-b474-8d32c67f7f61.png" alt="Juan Ángel Pérez Córcoles">
-      </section>
+  <nav class="sidebar-menu">
+    <h2>Menu</h2>
+    <ul>
+      <li><a href="index.html" class="active">About Me</a></li> 
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="TU_URL_DE_SUBSTACK" target="_blank">Metrika</a></li>
+    </ul>
+  </nav>
 
-      <footer>
-        © 2025 Juan Ángel Pérez Córcoles
-      </footer>
-    </div>
-  </div>
-</body>
+  <div class="main-content">
+    
+    <section class="about">
+      <img src="images/my-photo.jpg" alt="Foto de Juan Ángel Pérez Córcoles" class="profile-photo">
+      
+      <h2>About Me</h2>
+      <p>Hi! I’m Juan Ángel Pérez Córcoles, I'm a graduate in Economics and a master student of Statistics for Data Science at UC3M.</p>
+      <p>I'm an ex-american football player and ex-team member of a Formula Student Team.</p>
+      <p>Welcome to my personal site — here you can learn more about me, my CV, and the projects around Sports Analytics in which I'm working.</p>
+      <p>You can also take a look at my personal substack blog talk Metrika in which I explore stories surrounding the world of sports.</p>
+
+      <div class="social-icons">
+        <a href="TU_URL_DE_X" target="_blank" title="Mi perfil de X">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="TU_URL_DE_LINKEDIN" target="_blank" title="Mi perfil de LinkedIn">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="TU_URL_DE_SUBSTACK" target="_blank" title="Mi blog Metrika">
+          <i class="fa-brands fa-substack"></i>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Juan Ángel Pérez Córcoles
+    </footer>
+    
+  </div> </body>
 </html>
