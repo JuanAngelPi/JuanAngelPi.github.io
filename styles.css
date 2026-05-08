@@ -7,13 +7,13 @@
 
 /* ---------- VARIABLES ---------- */
 :root {
-  --sage: #8a9480;
-  --sage-light: #b5bfad;
-  --sage-dark: #6b7862;
+  --sage: #b22222;
+  --sage-light: #e7a5a5;
+  --sage-dark: #7f1d1d;
   --ink: #1c1c1e;
   --body-text: #3a3a3c;
   --muted: #6e6e73;
-  --bg: #f7f6f3;
+  --bg: #faf7f7;
   --white: #ffffff;
   --radius: 14px;
 }
