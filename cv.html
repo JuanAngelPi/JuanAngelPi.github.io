@@ -1,76 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Juan Ángel Pérez Córcoles - CV</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Ángel Pérez Córcoles - CV</title>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-<!-- CSS -->
-<link rel="stylesheet" href="styles.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="sidebar-menu" id="navbar">
-  <h2>Menu</h2>
-  <button class="menu-toggle" id="menuToggle"><i class="fa fa-bars"></i></button>
-  <ul>
-    <li><a href="index.html">About Me</a></li>
-    <li><a href="cv.html" class="active">CV</a></li>
-    <li><a href="projects.html">Projects</a></li>
-  </ul>
-</nav>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Juan Ángel Pérez Córcoles</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html" class="active">CV</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
 
-<div class="main-content fade-in">
-  <section class="cv">
+  <!-- HERO -->
+  <header class="hero fade-in">
     <h1>Curriculum Vitae</h1>
+    <p class="subtitle">Education, experience and technical skills</p>
+    <div class="hero-divider"></div>
+  </header>
 
-    <h3>Education</h3>
-    <p><strong>Bachelor’s Degree in Economics</strong> – Universidad Carlos III de Madrid </p>
-    <p><strong>Master’s in Statistics for Data Science</strong> – Universidad Carlos III de Madrid</p>
+  <!-- MAIN CONTENT -->
+  <div class="main-content fade-in">
 
-    <h3>Experience</h3>
-    <p><strong>Business Collaborator </strong> – MAD Formula Team, 2022-2024</p>
-    <p><strong>Sponsors Collaborator </strong> – MAD Formula Team, 2022-2023</p>
-    <p>Worked on the making of a business plan and helped the team in the search of sponsorships.</p>
+    <h2>Education</h2>
+    <p><strong>Bachelor’s Degree in Economics</strong> — Universidad Carlos III de Madrid</p>
+    <p><strong>Master’s in Statistics for Data Science</strong> — Universidad Carlos III de Madrid</p>
 
-    <h3>Skills</h3>
+    <h2>Experience</h2>
+    <p><strong>Business Collaborator</strong> — MAD Formula Team (2022–2024)</p>
+    <p><strong>Sponsors Collaborator</strong> — MAD Formula Team (2022–2023)</p>
+    <p>
+      Worked on business planning and sponsorship acquisition strategies
+      for the Formula Student team.
+    </p>
+
+    <h2>Skills</h2>
     <ul>
       <li>Python (Pandas, NumPy, Matplotlib, Scikit-learn)</li>
       <li>R, Excel</li>
       <li>Data Visualization & Storytelling</li>
+      <li>Statistical Modeling & Machine Learning</li>
     </ul>
 
-    
-
+    <!-- SOCIALS -->
     <div class="social-icons">
-      <a href="mailto:juanangel.perezcorcoles@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://x.com/JuanAngelPi" target="_blank" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/juan-%C3%A1ngel-p%C3%A9rez-c%C3%B3rcoles-3a3960251/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/JuanAngelPi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="mailto:juanangel.perezcorcoles@gmail.com" title="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://x.com/JuanAngelPi" target="_blank" title="X / Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/juan-%C3%A1ngel-p%C3%A9rez-c%C3%B3rcoles-3a3960251/" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/JuanAngelPi" target="_blank" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
     </div>
 
-  </section>
+  </div>
 
   <footer>© 2025 Juan Ángel Pérez Córcoles</footer>
-</div>
 
-<script>
-const menuToggle = document.getElementById('menuToggle');
-const navbar = document.getElementById('navbar');
-menuToggle.addEventListener('click', () => {
-  navbar.classList.toggle('open');
-});
-</script>
 </body>
 </html>
-
-
