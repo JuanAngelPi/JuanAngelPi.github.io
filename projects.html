@@ -1,62 +1,91 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Juan Ángel Pérez Córcoles - Projects</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Ángel Pérez Córcoles - Projects</title>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-<!-- CSS -->
-<link rel="stylesheet" href="styles.css">
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="sidebar-menu" id="navbar">
-  <h2>Menu</h2>
-  <button class="menu-toggle" id="menuToggle"><i class="fa fa-bars"></i></button>
-  <ul>
-    <li><a href="index.html">About Me</a></li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="projects.html" class="active">Projects</a></li>
-  </ul>
-</nav>
-
-<div class="main-content fade-in">
-  <section class="projects">
-    <h1>My Projects</h1>
-
-    <ul>
-      <li><a href="https://github.com/JuanAngelPi/NFL-Analytics-with-R" target="_blank">NFL Analytics with R</a> – Data modeling from vehicle sensors.</li>
-      <li><a href="#">Metrika Blog Data</a> – Explore stories on <a href="https://juanngelprezcrcoles.substack.com/?utm_campaign=profile_chips" target="_blank">Metrika</a>.</li>
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-brand">Juan Ángel Pérez Córcoles</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
     </ul>
+  </nav>
 
-    <div class="social-icons">
-      <a href="mailto:juanangel.perezcorcoles@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-      <a href="https://x.com/JuanAngelPi" target="_blank" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/juan-%C3%A1ngel-p%C3%A9rez-c%C3%B3rcoles-3a3960251/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/JuanAngelPi" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+  <!-- HERO -->
+  <header class="hero fade-in">
+    <h1>Projects</h1>
+    <p class="subtitle">Selected work in data science, analytics and sports</p>
+    <div class="hero-divider"></div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content fade-in">
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <h3>NFL Analytics with R</h3>
+        <p>
+          Data analysis and modeling projects focused on NFL performance and analytics.
+        </p>
+        <p>
+          <a href="https://github.com/JuanAngelPi/NFL-Analytics-with-R" target="_blank">
+            View on GitHub
+          </a>
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Metrika Blog</h3>
+        <p>
+          Sports analytics articles, storytelling and data visualizations.
+        </p>
+        <p>
+          <a href="https://juanngelprezcrcoles.substack.com/" target="_blank">
+            Visit Metrika
+          </a>
+        </p>
+      </div>
+
     </div>
 
-  </section>
+    <!-- SOCIALS -->
+    <div class="social-icons">
+      <a href="mailto:juanangel.perezcorcoles@gmail.com" title="Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://x.com/JuanAngelPi" target="_blank" title="X / Twitter">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/juan-%C3%A1ngel-p%C3%A9rez-c%C3%B3rcoles-3a3960251/" target="_blank" title="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/JuanAngelPi" target="_blank" title="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </div>
+
+  </div>
 
   <footer>© 2025 Juan Ángel Pérez Córcoles</footer>
-</div>
 
-<script>
-const menuToggle = document.getElementById('menuToggle');
-const navbar = document.getElementById('navbar');
-menuToggle.addEventListener('click', () => {
-  navbar.classList.toggle('open');
-});
-</script>
 </body>
 </html>
 
