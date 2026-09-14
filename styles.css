@@ -10,12 +10,14 @@
   --sage: #0d4f4f;
   --sage-light: #a0c8c8;
   --sage-dark: #083838;
+  --accent: #b5704a;      /* muted terracotta — used sparingly */
+  --accent-dark: #8f5837;
   --ink: #1c1c1e;
   --body-text: #3a3a3c;
   --muted: #6e6e73;
   --bg: #f5fafa;
   --white: #ffffff;
-  --radius: 6px;         /* tighter, flatter corners */
+  --radius: 0px;          /* fully square, brutalist */
   --border-w: 2px;
 }
 
@@ -69,7 +71,7 @@ nav {
 .nav-links a {
   display: block;
   padding: 10px 18px;
-  border-radius: 4px;
+  border-radius: var(--radius);
   color: rgba(255,255,255,0.88);
   text-decoration: none;
   font-size: 0.9rem;
@@ -93,11 +95,11 @@ nav {
 
 .hero h1 {
   font-family: 'Lora', serif;
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2.8rem, 7.5vw, 4.8rem);
   font-weight: 700;
   color: var(--ink);
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
@@ -110,9 +112,9 @@ nav {
 }
 
 .hero-divider {
-  width: 60px;
+  width: 70px;
   height: 4px;
-  background: var(--sage);
+  background: var(--accent);
   border-radius: 0;
   margin: 22px auto 0;
 }
@@ -136,9 +138,11 @@ nav {
 .about-text h2,
 .main-content h2 {
   font-family: 'Lora', serif;
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
   margin-bottom: 20px;
 }
 
@@ -160,7 +164,7 @@ nav {
 
 .main-content a:hover,
 .about-text a:hover {
-  color: var(--ink);
+  color: var(--accent-dark);
 }
 
 /* ---------- TAGS ---------- */
@@ -175,12 +179,18 @@ nav {
   background: white;
   color: var(--ink);
   border: var(--border-w) solid var(--ink);
-  border-radius: 4px;
+  border-radius: var(--radius);
   padding: 6px 14px;
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  transition: 0.15s;
+}
+
+.tag:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
 }
 
 /* ---------- PHOTO ---------- */
@@ -220,7 +230,7 @@ nav {
   justify-content: center;
   width: 42px;
   height: 42px;
-  border-radius: 4px;
+  border-radius: var(--radius);
   background: white;
   color: var(--sage-dark);
   font-size: 1.1rem;
@@ -257,13 +267,13 @@ nav {
 
 .project-card:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 4px 4px 0 var(--sage);
+  box-shadow: 4px 4px 0 var(--accent);
 }
 
 .project-card img {
   width: 100%;
   border: var(--border-w) solid var(--ink);
-  border-radius: 4px;
+  border-radius: var(--radius);
   margin-bottom: 16px;
 }
 
@@ -411,7 +421,7 @@ footer {
   max-width: 600px;
   height: auto;
   border: var(--border-w) solid var(--ink);
-  border-radius: 4px;
+  border-radius: var(--radius);
   margin: 12px 0 18px 0;
   display: block;
 }
