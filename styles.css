@@ -7,15 +7,15 @@
 
 /* ---------- VARIABLES ---------- */
 :root {
-  --sage: #0d4f4f;
-  --sage-light: #a0c8c8;
-  --sage-dark: #083838;
-  --accent: #b5704a;      /* muted terracotta — used sparingly */
-  --accent-dark: #8f5837;
+  --sage: #c1440e;         /* dominant warm rust/burnt-orange */
+  --sage-light: #f4c9a8;
+  --sage-dark: #7a2705;
+  --accent: #e8a33d;       /* warm gold/amber pop */
+  --accent-dark: #b9781f;
   --ink: #1c1c1e;
   --body-text: #3a3a3c;
   --muted: #6e6e73;
-  --bg: #f5fafa;
+  --bg: #fdf6f1;           /* warm cream background */
   --white: #ffffff;
   --radius: 0px;          /* fully square, brutalist */
   --border-w: 2px;
@@ -176,9 +176,9 @@ nav {
 }
 
 .tag {
-  background: white;
-  color: var(--ink);
-  border: var(--border-w) solid var(--ink);
+  background: var(--sage-light);
+  color: var(--sage-dark);
+  border: var(--border-w) solid var(--sage-dark);
   border-radius: var(--radius);
   padding: 6px 14px;
   font-size: 0.8rem;
@@ -189,8 +189,9 @@ nav {
 }
 
 .tag:hover {
-  border-color: var(--accent);
-  color: var(--accent-dark);
+  background: var(--accent);
+  border-color: var(--accent-dark);
+  color: var(--ink);
 }
 
 /* ---------- PHOTO ---------- */
