@@ -15,7 +15,8 @@
   --muted: #6e6e73;
   --bg: #f5fafa;
   --white: #ffffff;
-  --radius: 14px;
+  --radius: 6px;         /* tighter, flatter corners */
+  --border-w: 2px;
 }
 
 /* ---------- BASE ---------- */
@@ -34,6 +35,7 @@ body {
 /* ---------- NAVBAR ---------- */
 nav {
   background: var(--sage);
+  border: var(--border-w) solid var(--ink);
   border-radius: var(--radius);
   margin: 18px 40px;
   padding: 0 32px;
@@ -42,7 +44,7 @@ nav {
   position: sticky;
   top: 14px;
   z-index: 100;
-  box-shadow: 0 4px 24px rgba(13, 79, 79, 0.18);
+  box-shadow: none;
 }
 
 .nav-brand {
@@ -53,6 +55,8 @@ nav {
   text-decoration: none;
   padding: 18px 0;
   margin-right: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .nav-links {
@@ -65,18 +69,20 @@ nav {
 .nav-links a {
   display: block;
   padding: 10px 18px;
-  border-radius: 8px;
+  border-radius: 4px;
   color: rgba(255,255,255,0.88);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: 0.2s;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: 0.15s;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  background: rgba(255,255,255,0.18);
-  color: white;
+  background: white;
+  color: var(--sage-dark);
 }
 
 /* ---------- HERO ---------- */
@@ -87,24 +93,28 @@ nav {
 
 .hero h1 {
   font-family: 'Lora', serif;
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-size: clamp(2.4rem, 6vw, 4rem);
   font-weight: 700;
   color: var(--ink);
-  line-height: 1.15;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
 }
 
 .subtitle {
-  margin-top: 10px;
+  margin-top: 12px;
   font-size: 1.15rem;
-  color: var(--muted);
+  font-weight: 600;
+  color: var(--sage-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .hero-divider {
   width: 60px;
-  height: 3px;
+  height: 4px;
   background: var(--sage);
-  border-radius: 2px;
-  margin: 20px auto 0;
+  border-radius: 0;
+  margin: 22px auto 0;
 }
 
 /* ---------- MAIN CONTENT ---------- */
@@ -126,7 +136,7 @@ nav {
 .about-text h2,
 .main-content h2 {
   font-family: 'Lora', serif;
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: var(--ink);
   margin-bottom: 20px;
@@ -156,20 +166,21 @@ nav {
 /* ---------- TAGS ---------- */
 .tags {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
   margin: 24px 0;
 }
 
 .tag {
-  background: rgba(13, 79, 79, 0.10);
-  color: var(--sage-dark);
-  border: 1px solid rgba(13, 79, 79, 0.25);
-  border-radius: 20px;
-  padding: 4px 14px;
-  font-size: 0.82rem;
-  font-weight: 600;
+  background: white;
+  color: var(--ink);
+  border: var(--border-w) solid var(--ink);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 /* ---------- PHOTO ---------- */
@@ -180,10 +191,11 @@ nav {
 
 .profile-photo {
   width: 100%;
+  border: var(--border-w) solid var(--ink);
   border-radius: var(--radius);
   object-fit: cover;
   aspect-ratio: 4/5;
-  box-shadow: 0 12px 40px rgba(13, 79, 79, 0.22);
+  box-shadow: none;
 }
 
 .photo-caption {
@@ -208,21 +220,22 @@ nav {
   justify-content: center;
   width: 42px;
   height: 42px;
-  border-radius: 50%;
+  border-radius: 4px;
   background: white;
   color: var(--sage-dark);
   font-size: 1.1rem;
-  border: 1.5px solid var(--sage-light);
+  border: var(--border-w) solid var(--ink);
   text-decoration: none;
-  transition: 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: 0.15s;
+  box-shadow: none;
 }
 
 .social-icons a:hover {
   background: var(--sage);
   color: white;
   border-color: var(--sage);
-  transform: translateY(-2px);
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 /* ---------- PROJECT CARDS ---------- */
@@ -236,18 +249,21 @@ nav {
 .project-card {
   background: white;
   padding: 24px;
+  border: var(--border-w) solid var(--ink);
   border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transition: transform 0.2s;
+  box-shadow: none;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
+  transform: translate(-3px, -3px);
+  box-shadow: 4px 4px 0 var(--sage);
 }
 
 .project-card img {
   width: 100%;
-  border-radius: 10px;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 4px;
   margin-bottom: 16px;
 }
 
@@ -262,7 +278,7 @@ footer {
   max-width: 1100px;
   margin: 0 auto;
   padding: 24px 40px;
-  border-top: 1px solid rgba(13, 79, 79, 0.2);
+  border-top: var(--border-w) solid var(--ink);
   color: var(--muted);
   font-size: 0.85rem;
   text-align: center;
@@ -335,12 +351,19 @@ footer {
 .projects-sidebar {
   position: sticky;
   top: 100px;
+  border: var(--border-w) solid var(--ink);
+  border-radius: var(--radius);
+  padding: 20px;
+  background: white;
 }
 
 .projects-sidebar h3 {
   font-family: 'Lora', serif;
   margin-bottom: 20px;
   color: var(--ink);
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
 }
 
 .projects-sidebar ul {
@@ -355,8 +378,8 @@ footer {
 .projects-sidebar a {
   text-decoration: none;
   color: var(--muted);
-  font-weight: 500;
-  transition: 0.2s;
+  font-weight: 600;
+  transition: 0.15s;
 }
 
 .projects-sidebar a:hover {
@@ -366,7 +389,7 @@ footer {
 .project-section {
   margin-bottom: 60px;
   padding-bottom: 30px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: var(--border-w) solid var(--ink);
 }
 
 .project-section h2 {
@@ -387,7 +410,8 @@ footer {
   width: 100%;
   max-width: 600px;
   height: auto;
-  border-radius: 8px;
+  border: var(--border-w) solid var(--ink);
+  border-radius: 4px;
   margin: 12px 0 18px 0;
   display: block;
 }
